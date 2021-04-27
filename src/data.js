@@ -18,7 +18,6 @@ async function getWeather(city) {
     const lat = await weatherData.coord.lat;
     const forecast = await forecasting(lat, lon);
     const forecastData = await forecast.json();
-    console.log(weatherData.weather[0].icon);
     currentConditions(
       weatherData.name,
       weatherData.main,
