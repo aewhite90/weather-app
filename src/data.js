@@ -9,7 +9,7 @@ async function buildURL() {
 async function getWeather(city) {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bfb0bf7cbddbc82c8afdb99f216e5f4f`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bfb0bf7cbddbc82c8afdb99f216e5f4f`,
       {
         mode: "cors",
       }
