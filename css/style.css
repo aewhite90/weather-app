@@ -126,6 +126,7 @@ section {
 .city-temp {
   display: flex;
   color: var(--yellow);
+  flex-wrap: wrap;
 }
 
 .weather-container {
