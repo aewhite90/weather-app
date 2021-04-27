@@ -9,10 +9,7 @@ async function buildURL() {
 async function getWeather(city) {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bfb0bf7cbddbc82c8afdb99f216e5f4f`,
-      {
-        mode: "cors",
-      }
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bfb0bf7cbddbc82c8afdb99f216e5f4f`
     );
     const weatherData = await response.json();
     const lon = await weatherData.coord.lon;
@@ -33,10 +30,7 @@ async function getWeather(city) {
 
 async function forecasting(lat, lon) {
   const forecast = await fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=bfb0bf7cbddbc82c8afdb99f216e5f4f`,
-    {
-      mode: "cors",
-    }
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=bfb0bf7cbddbc82c8afdb99f216e5f4f`
   );
   return forecast;
 }
